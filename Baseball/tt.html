@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section id="page">
+    <header>Header</header>
+
+    <main1><h3>오늘 경기 일정</h3><div class="div"></div></main1>
+    <main2><h3>내일 경기 일정</h3><div class="div"></div></main2>
+
+
+
+    <footer>Footer</footer>
+</section>
+
+<style>
+    #page {
+        display: grid;
+        width: 100%;
+        height: 30em;
+        grid-template-areas: "head "
+        "main1"
+        "main2"
+        "foot";
+        grid-template-rows: 15% 150% 150% 15%;
+        grid-template-columns: 100%;
+    }
+
+    #page > header {
+        grid-area: head;
+        background-color: #8ca0ff;
+    }
+
+    #page > nav {
+        grid-area: nav;
+        background-color: #ffa08c;
+    }
+
+    #page > main1 {
+        grid-area: main1;
+        background-color: #C8DAF2;
+    }
+    #page > main2 {
+        grid-area: main2;
+        background-color: #8ca0ff;
+    }
+    .div {
+
+        margin: 10px;
+        border: 2px solid red;
+        padding: 25%;
+    }
+
+
+
+    #page > footer {
+        grid-area: foot;
+        background-color: #8cffa0;
+
+    }
+
+
+
+</style>
+</body>
+</html>

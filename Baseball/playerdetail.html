@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<section id="page"  >
+
+
+    <header>Header
+        <button class="menu">버튼</button>
+    </header>
+
+
+    <playimg> <div class="menu1"><h1>btn</h1></div>
+        playimg (선수 이미지) <img src="선수.PNG"> </playimg>
+    <profile>profile(선수 프로필 내용)
+        <div>이름 : </div>
+        <div>나이 :</div>
+        <div>몸무게 :</div>
+        <div>키 :</div>
+        <div>졸업 :</div>
+    </profile>
+    <behind >behind(비하인드 스토리)
+        <div class="behind">
+
+        </div>
+    </behind>
+    <playrecord>playrecord(경기 기록)
+        <div class="playrecord">
+        </div>
+    </playrecord>
+    <footer>Footer</footer>
+</section>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(".menu1").hide();
+
+    $(".menu").on("click", function () {
+        $(".menu1").show('slow');
+    })
+    $("profile").on("click", function () {
+        $(".menu1").hide();
+    })
+    $("behind").on("click", function () {
+        $(".menu1").hide();
+    })
+    $("playrecord").on("click", function () {
+        $(".menu1").hide();
+    })
+
+</script>
+
+<style>
+    .menu1 {
+        position: absolute;
+        display: block;
+        background-color: #FFCCCC;
+        width: 400px;
+        height: 800px;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        position: absolute;
+    }
+    body , html {
+        height: 100%;
+    }
+
+    body{
+        background-image: url('야구3.jpg');
+        background-size: 100%;
+    }
+
+    *{padding: 0px;
+        margin: 0px;
+    }
+
+
+    .behind{
+        border: 200px solid pink ;
+        margin: 10px 10px;
+        background-color: rgba( 255, 255, 255, 0.5 );
+    }
+
+    .playrecord{
+        border: 200px solid pink ;
+        margin: 2em 2em;
+        background-color: rgba( 255, 255, 255, 0.5 );
+    }
+
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+
+        grid-template-areas: "head  head"
+        " playimg profile"
+        " behind behind"
+        " playrecord playrecord"
+        " foot foot" ;
+        grid-template-rows: 5% 30% 30% 30% 5%;
+        grid-template-columns: 15% 85%;
+    }
+
+    #page>playimg{
+        grid-area: playimg;
+        background-color: rgba( 255, 255, 255, 0.5 );
+
+    }
+    #page> behind{
+        grid-area: behind;
+        background-color: rgba( 255, 255, 255, 0.5 );
+
+    }
+    #page>playrecord{
+        grid-area: playrecord;
+        background-color: rgba( 255, 255, 255, 0.5 );
+
+    }
+
+    #page>profile{
+        grid-area: profile;
+        background-color: rgba( 255, 255, 255, 0.5 );
+
+    }
+
+    #page > header {
+        grid-area: head;
+        background-color: #CCE7C8;
+    }
+
+
+
+
+
+    #page > footer {
+        grid-area: foot;
+        background-color: #CCE7C8;
+    }
+
+</style>
+</body>
+
+</html>

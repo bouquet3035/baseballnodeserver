@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="teamdetail"><h3>팀 상세 정보 </h3></div>
+<div class="teamnews"><h3>팀에 관한 뉴스 </h3></div>
+<div class="player">
+    <div class="player"><h3>선수 A</h3></div>
+    <div  class="player"><h3>선수 B</h3></div>
+    <div  class="player"><h3>선수 C</h3></div>
+    <div  class="player"><h3>선수 D</h3></div>
+    <div  class="player"><h3>선수 E</h3></div>
+    <div  class="player"><h3>선수 A</h3></div>
+    <div  class="player"><h3>선수 B</h3></div>
+    <div  class="player"><h3>선수 C</h3></div>
+    <div  class="player"><h3>선수 D</h3></div>
+    <div  class="player"><h3>선수 E</h3></div>
+    <div  class="player"><h3>선수 A</h3></div>
+    <div  class="player"><h3>선수 B</h3></div>
+    <div  class="player"><h3>선수 C</h3></div>
+    <div  class="player"><h3>선수 D</h3></div>
+    <div  class="player"><h3>선수 E</h3></div>
+
+</div>
+
+
+<style>
+    .teamdetail {
+        display: grid;
+        border: 2px solid blue;
+        padding: 10px;
+        margin:30px;
+
+    }
+    .teamnews{
+        display: grid;
+        border: 2px solid pink;
+        padding: 30px;
+        margin:30px;
+    }
+    .player{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 1em;
+        border: 2px solid blue;
+        margin:30px;
+    }
+
+
+
+
+</style>
+</body>
+</html>

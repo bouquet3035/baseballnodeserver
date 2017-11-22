@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section id="page">
+    <header>Header</header>
+    <nav>Navigation
+        <div><a href="http://localhost:63342/untitled1/Baseball/game.html?_ijt=eqlqo2do05p921ebttutja0v7q"> 현재 시합 정보</a></div>
+        <div><a href="http://localhost:63342/untitled1/Baseball/scehedule.html?_ijt=5fmlq3tkrkd5jv3dutakp2dnqc">일정표</a></div>
+        <div><a href="">설정(마이페이지)</a></div>
+        <div><a href="http://localhost:63342/untitled1/Baseball/teamrecord.html?_ijt=eqlqo2do05p921ebttutja0v7q">팀정보 </a></div>
+        <div><a href="">선수검색</a></div>
+    </nav>
+    <teamdetail>팀 상세정보
+        <div class="teamdetail">
+            <img src="팀%20상세정보.PNG" >
+
+        </div>
+
+   </teamdetail>
+
+
+    <teamnews>팀 관련 뉴스
+        <div class="teamnews">
+
+        </div>
+    </teamnews>
+
+    <player>선수 정보
+        <div class="player">
+            <div class="player"><h3>선수 A</h3></div>
+            <div  class="player"><h3>선수 B</h3></div>
+            <div  class="player"><h3>선수 C</h3></div>
+            <div  class="player"><h3>선수 D</h3></div>
+
+
+        </div>
+    </player>
+
+    <footer>Footer</footer>
+</section>
+
+
+
+<style>
+    html, body{
+        height: 100%;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .player{
+        display: grid;
+        grid-template-columns: repeat(4, 12em);
+        grid-column-gap: 1px;
+        grid-row-gap: 1px;
+        border: 3px solid blue;
+
+    }
+
+    .player{
+        margin : 1em;
+    }
+    .teamnews{margin: 1px 1px;}
+
+    .teamdetail{
+
+        margin: 1em 1em;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head head"
+                                "nav  teamdetail"
+                                "nav  teamnews"
+                                "nav player"
+                                "foot foot " ;
+        grid-template-rows: 5% 30% 30% 130% 5%;
+        grid-template-columns: 15% 85%;
+    }
+    #page > teamdetail{
+        grid-area: teamdetail;
+        background-color: #8cffa0;
+    }
+    #page > teamnews{
+        grid-area:teamnews ; background-color: #E1CEEC;
+    }
+    #page > player{  grid-area: player ; background-color: #C8DAF2 ;  }
+
+
+    #page > header {
+        grid-area: head;
+        background-color: #8ca0ff;
+    }
+
+    #page > nav {
+        grid-area: nav;
+        background-color: #ffa08c;
+    }
+
+    #page > main {
+        grid-area: main;
+        background-color: #ffff64;
+    }
+    .team{
+        border: 2px solid pink;
+        margin-left: 3em;
+        margin-right: 30em;
+        padding-bottom: 20em;
+        background-color: #477FD6;
+    }
+
+    #page > footer {
+        grid-area: foot;
+        background-color: #8cffa0;
+
+    }
+
+</style>
+</body>
+</html>
